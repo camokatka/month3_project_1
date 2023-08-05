@@ -14,6 +14,10 @@
 		01349CE62A78D75900166A6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01349CE52A78D75900166A6B /* Assets.xcassets */; };
 		01349CE92A78D75900166A6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01349CE72A78D75900166A6B /* LaunchScreen.storyboard */; };
 		01349CF12A79345900166A6B /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01349CF02A79345900166A6B /* FinalViewController.swift */; };
+		01DD94742A7AADFE00AEF378 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 01DD94732A7AADFE00AEF378 /* SnapKit */; };
+		01DD94762A7CF13300AEF378 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DD94752A7CF13300AEF378 /* SignUpViewController.swift */; };
+		01DD94782A7D5D9E00AEF378 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DD94772A7D5D9E00AEF378 /* ForgetPasswordViewController.swift */; };
+		01DD947A2A7D660700AEF378 /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DD94792A7D660700AEF378 /* NewPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,9 @@
 		01349CE82A78D75900166A6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01349CEA2A78D75900166A6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01349CF02A79345900166A6B /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
+		01DD94752A7CF13300AEF378 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		01DD94772A7D5D9E00AEF378 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
+		01DD94792A7D660700AEF378 /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01DD94742A7AADFE00AEF378 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +68,15 @@
 			children = (
 				01349CDC2A78D75500166A6B /* AppDelegate.swift */,
 				01349CDE2A78D75500166A6B /* SceneDelegate.swift */,
+				01DD94752A7CF13300AEF378 /* SignUpViewController.swift */,
 				01349CE02A78D75500166A6B /* ViewController.swift */,
 				01349CE22A78D75500166A6B /* Main.storyboard */,
 				01349CE52A78D75900166A6B /* Assets.xcassets */,
 				01349CE72A78D75900166A6B /* LaunchScreen.storyboard */,
 				01349CEA2A78D75900166A6B /* Info.plist */,
 				01349CF02A79345900166A6B /* FinalViewController.swift */,
+				01DD94772A7D5D9E00AEF378 /* ForgetPasswordViewController.swift */,
+				01DD94792A7D660700AEF378 /* NewPasswordViewController.swift */,
 			);
 			path = month3_project_1;
 			sourceTree = "<group>";
@@ -86,6 +97,9 @@
 			dependencies = (
 			);
 			name = month3_project_1;
+			packageProductDependencies = (
+				01DD94732A7AADFE00AEF378 /* SnapKit */,
+			);
 			productName = month3_project_1;
 			productReference = 01349CD92A78D75500166A6B /* month3_project_1.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +128,9 @@
 				Base,
 			);
 			mainGroup = 01349CD02A78D75500166A6B;
+			packageReferences = (
+				01DD94722A7AADFE00AEF378 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 01349CDA2A78D75500166A6B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -143,7 +160,10 @@
 			files = (
 				01349CF12A79345900166A6B /* FinalViewController.swift in Sources */,
 				01349CE12A78D75500166A6B /* ViewController.swift in Sources */,
+				01DD947A2A7D660700AEF378 /* NewPasswordViewController.swift in Sources */,
+				01DD94762A7CF13300AEF378 /* SignUpViewController.swift in Sources */,
 				01349CDD2A78D75500166A6B /* AppDelegate.swift in Sources */,
+				01DD94782A7D5D9E00AEF378 /* ForgetPasswordViewController.swift in Sources */,
 				01349CDF2A78D75500166A6B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,6 +382,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		01DD94722A7AADFE00AEF378 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		01DD94732A7AADFE00AEF378 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 01DD94722A7AADFE00AEF378 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 01349CD12A78D75500166A6B /* Project object */;
 }
