@@ -6,50 +6,79 @@
 //
 
 import UIKit
+import SnapKit
 
 class ViewController: UIViewController {
 
-    
-    @IBOutlet weak var IdTextField: UITextField!
-    
-    
-    @IBOutlet weak var PasswordTextField: UITextField!
-    
-    
-    @IBOutlet weak var SingInButton: UIButton!
-    
-    @IBAction func signIn(_ sender: Any) {
-        var flag = false
-        if IdTextField.text?.isEmpty ?? true {
-            IdTextField.layer.borderColor = UIColor.red.cgColor
-            IdTextField.layer.borderWidth = 1
-            IdTextField.placeholder = "Fill  the information"
-        } else {
-            IdTextField.layer.borderColor = UIColor.white.cgColor
-            flag = true
-        }
-        
-        if PasswordTextField.text?.isEmpty ?? true {
-            PasswordTextField.layer.borderColor = UIColor.red.cgColor
-            PasswordTextField.layer.borderWidth = 1
-            PasswordTextField.placeholder = "Fill the information"
 
-        } else {
-            PasswordTextField.layer.borderColor = UIColor.white.cgColor
-            flag = true
-        }
-        
-        if flag {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "FinalViewController") as! FinalViewController
-            present(vc, animated: true)
-        }
-    }
+    @IBOutlet weak var forgotPasswordButton: UIButton!
     
+    @IBOutlet weak var idTextField: UITextField!
+    
+
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    
+    @IBOutlet weak var singInButton: UIButton!
+    
+    @IBOutlet weak var singUpButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
+    
+  
+    
+    @IBAction func singUp(_ sender: Any) {
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
+        navigationController?.pushViewController(vc, animated: true)
+      
+        
+    }
+    
+
+    @IBAction func singIn(_ sender: Any) {
+        
+             var flag = false
+             if idTextField.text?.isEmpty ?? true {
+                 idTextField.layer.borderColor = UIColor.red.cgColor
+                 idTextField.layer.borderWidth = 1
+                 idTextField.placeholder = "Fill the information"
+             } else {
+                 idTextField.layer.borderColor = UIColor.white.cgColor
+                 flag = true
+             }
+             
+             if passwordTextField.text?.isEmpty ?? true {
+                 passwordTextField.layer.borderColor = UIColor.red.cgColor
+                 passwordTextField.layer.borderWidth = 1
+                 passwordTextField.placeholder = "Fill the information"
+
+             } else {
+                 passwordTextField.layer.borderColor = UIColor.white.cgColor
+                 flag = true
+             }
+             
+             if flag {
+                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "FinalViewController") as! FinalViewController
+                 present(vc, animated: true)
+             }
+        
+    }
+    
+    
+    @IBAction func forgotPwd(_ sender: Any) {
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "NewPasswordViewController") as! NewPasswordViewController
+        navigationController?.pushViewController(vc, animated: true)
+      
+        
+        
+    }
+    
+    
 
 
 }
